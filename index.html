@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD Kaede 🎂</title>
+    <!-- Google Fonts: Cormorant Garamond (Image exact match) & Elegant Cursive -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Caveat:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css?v=16">
+</head>
+<body>
+    <!-- Background Image & Vintage Underwater Lighting Layers -->
+    <div class="bg-wrapper">
+        <div class="bg-image"></div>
+        <div class="bg-overlay"></div>
+        <div class="underwater-glimmer"></div>
+        <div class="water-caustics"></div>
+    </div>
+
+    <!-- Canvas: Twinkling Stars & Rising Underwater Bubbles -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- Header & Typography: 오직 깔끔한 메인 타이틀만 유지 -->
+    <header class="main-header">
+        <div class="title-wrap">
+            <h1 class="hbd-title">HBD Kaede</h1>
+            <div class="ribbon-decor">
+                <span class="ribbon-line"></span>
+                <span class="ribbon-icon">୨୧</span>
+                <span class="ribbon-line"></span>
+            </div>
+        </div>
+
+        <!-- Top Navigation: 텍스트 없이 깔끔한 미니멀 버튼 -->
+        <div class="top-nav">
+            <button id="bgm-toggle-btn" class="nav-btn icon-only" title="Toggle Music">
+                <span class="btn-icon">🎵</span>
+            </button>
+            <button id="letter-open-btn" class="nav-btn icon-only" title="Read Birthday Letter">
+                <span class="btn-icon">💌</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Stage: Underwater Floating & Bobbing Photos -->
+    <main id="underwater-stage"></main>
+
+    <!-- 🌟 Modal 1: Memory Album (Multiple Photos Collection) -->
+    <div id="memory-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-card">
+            <button class="modal-close-btn" aria-label="Close">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-tag" id="modal-date">Memory 01</span>
+                <h2 class="modal-title" id="modal-title">Memory Title</h2>
+                <div class="modal-divider"><span>୨୧</span></div>
+                <p class="modal-desc" id="modal-desc">Cherished moments from that day</p>
+            </div>
+
+            <!-- Photos Gallery Grid -->
+            <div class="photos-gallery" id="modal-gallery">
+                <!-- Dynamically rendered photo cards -->
+            </div>
+
+            <div class="modal-footer">
+                <p class="modal-tip">💡 Click any photo to view full size</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 💌 Modal 2: Birthday Letter -->
+    <div id="letter-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="letter-card">
+            <button class="modal-close-btn" aria-label="Close">&times;</button>
+            <div class="letter-inner">
+                <div class="envelope-stamp">✦ HBD ✦</div>
+                <h2 class="letter-title" id="letter-title">Dear. Kaede 💌</h2>
+                <div class="letter-date" id="letter-date">November 13, 2026</div>
+                <div class="letter-body" id="letter-content">
+                    <!-- Letter content -->
+                </div>
+                <div class="letter-sign">With all my love, forever soulmate ୨୧</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔍 Lightbox Modal: Fullsize Photo Zoom with Prev/Next Navigation -->
+    <div id="lightbox-modal" class="lightbox-overlay" aria-hidden="true">
+        <div class="lightbox-backdrop"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close-btn">&times;</button>
+            <button class="lightbox-nav-btn prev-btn" id="lightbox-prev" aria-label="Previous Photo">&#10094;</button>
+            <div class="lightbox-img-wrapper" id="lightbox-img-container">
+                <!-- Enlarged image -->
+            </div>
+            <button class="lightbox-nav-btn next-btn" id="lightbox-next" aria-label="Next Photo">&#10095;</button>
+            <div class="lightbox-counter" id="lightbox-counter"></div>
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- Scripts with Cache Buster -->
+    <script src="static/js/data.js?v=16"></script>
+    <script src="static/js/main.js?v=16"></script>
+</body>
+</html>
